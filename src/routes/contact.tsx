@@ -32,7 +32,7 @@ function Contact() {
           <form className="space-y-4" onSubmit={(e) => {
             e.preventDefault();
             const r = schema.safeParse(Object.fromEntries(new FormData(e.currentTarget)));
-            if (!r.success) return setErr(r.error.issues[0].message);
+            if (!r.success) return setErr(r.error.issues[0]?.message ?? "Please check the form");
             setErr(""); setSent(true);
           }}>
             <label className="block text-sm">Name<input name="name" className="field mt-1" maxLength={100} /></label>
