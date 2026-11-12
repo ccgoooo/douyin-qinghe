@@ -4,7 +4,7 @@ import { useStore } from "@/lib/store";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/account")({
-  head: () => ({ meta: [...seo("Member area", "Your Qinghe Studio member benefits.").meta, { name: "robots", content: "noindex" }] }),
+  head: () => seo("Member area", "Your Qinghe Studio member benefits."),
   component: Account,
 });
 

@@ -4,7 +4,7 @@ import soap from "@/assets/p-soap.jpg";
 import hero from "@/assets/hero.jpg";
 
 /** Set to true to add <meta name="robots" content="noindex,nofollow"> on every page. */
-export const SEO_NOINDEX = true;
+export const SEO_NOINDEX = false;
 
 export type Product = { id: string; name: string; desc: string; price: number; image: string; tag: string };
 
